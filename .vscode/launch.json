@@ -1,0 +1,29 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Launch VisualBoyAdvance",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "/usr/bin/flatpak",
+      "args": [
+        "run",
+        "--command=visualboyadvance-m",
+        "com.vba_m.visualboyadvance-m",
+        "${workspaceFolder}/${workspaceFolderBasename}.gba"
+      ],
+      "cwd": "${workspaceFolder}",
+      "stopAtEntry": false,
+      "externalConsole": false,
+      "MIMode": "gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ],
+      "preLaunchTask": "build"
+    }
+  ]
+}
